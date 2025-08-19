@@ -20,6 +20,9 @@ if filter_date:
     filter_date = datetime.strptime(filter_date, '%Y-%d-%m').date()
 
 for file_name in args.file:
+    if not os.path.exists(file_name):
+        print('file not found:', file_name)
+        continue
     with open(file_name) as file:
         for line in file:
             row = json.loads(line)
@@ -39,7 +42,7 @@ for row in table:
     del row['time']
 
 out = tabulate(table, headers='keys')
-if args.report:
+if args.report and out:
     with open(os.path.join(REPORTS_DIR, args.report), 'w') as file:
         file.write(out)
 print(out)
