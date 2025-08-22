@@ -1,0 +1,7 @@
+    handler                     total    avg_response_time
+--  ------------------------  -------  -------------------
+ 0  /api/homeworks/...          55312                0.093
+ 1  /api/context/...            43928                0.019
+ 2  /api/specializations/...     8335                0.052
+ 3  /api/challenges/...          1476                0.078
+ 4  /api/users/...               1447                0.066
