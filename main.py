@@ -1,7 +1,6 @@
 import argparse
 import json
 import os.path
-import sys
 from tabulate import tabulate
 from datetime import date, datetime
 
