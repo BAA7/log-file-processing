@@ -1,1 +1,2 @@
-/log_example/
+.coverage
+__pycache__/
